@@ -15,7 +15,7 @@
 </div>
 <div class="ui four stackable cards container">
   <div v-for="album in allAlbums" :key="album._id"
-  class="ui fade reveal card">
+  class="ui card">
     <a :href="album.albumInfo.external_urls.spotify"
     target="_blank"
     class="image visible content">
@@ -23,12 +23,12 @@
       width="album.albumInfo.images[1].width"
       height="album.albumInfo.images[1].height">
     </a>
-    <div style="width: album.albumInfo.images[1].width; height: album.albumInfo.images[1].height;"
+    <!-- <div style="width: album.albumInfo.images[1].width; height: album.albumInfo.images[1].height;"
     class="hidden content image">
       <img src="../assets/square.gif"
       width="album.albumInfo.images[1].width"
       height="album.albumInfo.images[1].height">
-    </div>
+    </div> -->
   </div>
 </div>
 </div>
