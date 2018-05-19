@@ -1,12 +1,12 @@
 <template>
   <div class="ui secondary pointing menu">
-    <router-link to="/" class="active item">
+    <router-link to="/" class="item">
       Spottery
     </router-link>
     <div class="right menu">
       <div v-if="isLoggedIn" class="horizontal">
         <router-link to="/" class="item">
-          Album
+          Albums
         </router-link>
         <a @click="logout" class="item">
           Logout
