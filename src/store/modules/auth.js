@@ -1,10 +1,10 @@
-import api from '../../api/imgur';
+import api from '../../api/spotify';
 import qs from 'qs';
 
 import { router } from '../../main';
 
 const state = {
-  token: window.localStorage.getItem('imgur_token')
+  token: window.localStorage.getItem('spotify_token')
 }
 
 const getters = {
@@ -24,12 +24,12 @@ const actions = {
   finalizeLogin: ({ commit }, hash) => {
     const { access_token } = qs.parse(hash.replace('#', ''));
     commit('setToken', access_token);
-    window.localStorage.setItem('imgur_token', access_token);
+    window.localStorage.setItem('spotify_token', access_token);
     router.push('/');
   },
   logout: ({ commit }) => {
     commit('setToken', null);
-    window.localStorage.removeItem('imgur_token');
+    window.localStorage.removeItem('spotify_token');
   },
 }
 

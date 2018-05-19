@@ -16,7 +16,7 @@ export const router = new VueRouter({
       component: AlbumList
     },
     {
-      path: '/oauth2/callback',
+      path: '/callback',
       component: AuthHandler
     }
   ]
